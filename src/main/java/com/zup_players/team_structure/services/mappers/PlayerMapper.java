@@ -1,8 +1,8 @@
 package com.zup_players.team_structure.services.mappers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zup_players.team_structure.controllers.dtos.players.PlayerRegisterDTO;
 import com.zup_players.team_structure.controllers.dtos.players.PlayerResponseDTO;
+import com.zup_players.team_structure.controllers.dtos.players.PlayerUpdateDTO;
 import com.zup_players.team_structure.models.Player;
 import com.zup_players.team_structure.models.Team;
 
@@ -27,6 +27,18 @@ public class PlayerMapper {
         for (PlayerRegisterDTO playerRegisterDTO1 : playerRegisterDTO) {
             Player player = new Player();
             player.setName(playerRegisterDTO1.getName());
+            player.setTeam(team);
+            players.add(player);
+        }
+        return players;
+    }
+
+    public static List<Player> fromPlayerUpdateDTO(List<PlayerUpdateDTO> playerUpdateDTO, Team team) {
+        List<Player> players = new ArrayList<>();
+        for (PlayerUpdateDTO playerUpdateDTO1 : playerUpdateDTO) {
+            Player player = new Player();
+            player.setId(playerUpdateDTO1.getId());
+            player.setName(playerUpdateDTO1.getName());
             player.setTeam(team);
             players.add(player);
         }
