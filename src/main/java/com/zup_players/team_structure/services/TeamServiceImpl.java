@@ -62,4 +62,8 @@ public class TeamServiceImpl implements TeamService {
         }
         return teamRepository.save(teamData);
     }
+
+    public void deleteTeam(Long id) {
+        teamRepository.deleteById(id);
+    }
 }

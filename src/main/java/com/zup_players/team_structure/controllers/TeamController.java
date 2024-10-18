@@ -34,4 +34,10 @@ public class TeamController {
         return teamService.updateTeam(TeamMapper.fromTeamUpdateDTO(teamUpdateDTO));
     }
 
+    @DeleteMapping("/{teamId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteTeam(@PathVariable Long teamId) {
+        teamService.deleteTeam(teamId);
+    }
+
 }
