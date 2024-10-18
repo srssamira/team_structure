@@ -1,6 +1,5 @@
 package com.zup_players.team_structure.controllers.dtos.teams;
 
-import com.zup_players.team_structure.controllers.dtos.players.PlayerRegisterDTO;
 import com.zup_players.team_structure.controllers.dtos.players.PlayerUpdateDTO;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;

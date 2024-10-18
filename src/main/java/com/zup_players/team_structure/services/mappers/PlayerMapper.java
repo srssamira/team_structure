@@ -23,7 +23,7 @@ public class PlayerMapper {
     }
 
     public static List<Player> fromPlayerRegisterDTO(List<PlayerRegisterDTO> playerRegisterDTO, Team team) {
-        List<Player> players = new ArrayList<Player>();
+        List<Player> players = new ArrayList<>();
         for (PlayerRegisterDTO playerRegisterDTO1 : playerRegisterDTO) {
             Player player = new Player();
             player.setName(playerRegisterDTO1.getName());
