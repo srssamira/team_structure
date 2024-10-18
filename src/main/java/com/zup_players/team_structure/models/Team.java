@@ -6,9 +6,10 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Entity
+
 @Setter
 @Getter
+@Entity
 public class Team {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -3,7 +3,7 @@ spring:
     name: team_structure
   datasource:
     url: jdbc:postgresql://localhost:5432/team_structure
-    username: postgresql
+    username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
   jpa:
@@ -13,4 +13,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-
